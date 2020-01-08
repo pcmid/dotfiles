@@ -276,6 +276,21 @@ bindsym $mod+r mode "resize"
     # }
 # }
 
+# i3status-rs
+#bar {
+#    font pango:DejaVu Sans Mono, FontAwesome 12
+#    position top
+#    status_command i3status-rs ~/.config/i3status-rs/config.toml
+#    colors {
+#        separator #666666
+#        background #222222
+#        statusline #dddddd
+#        focused_workspace #0088CC #0088CC #ffffff
+#        active_workspace #333333 #333333 #ffffff
+#        inactive_workspace #333333 #333333 #888888
+#        urgent_workspace #2f343a #900000 #ffffff
+#    }
+#}
 # polybar
 # bar {
     # i3bar_command $HOME/.config/polybar/launch.sh
@@ -309,7 +324,7 @@ exec --no-startup-id copyq
 #bindsym $mod+Control+a exec "flameshot gui"
 
 # compton
-exec --no-startup-id compton -f
+exec_always --no-startup-id compton -f
 
 #######################################################################
 # automatically start i3-config-wizard to offer the user to create a

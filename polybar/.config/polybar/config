@@ -5,7 +5,7 @@ include-file = $HOME/.config/polybar/nord-modules
 include-file = $HOME/.config/polybar/nord-config
 
 
-[bar/nord-top]
+[bar/nord-modules]
 #imonitor = ${env:MONITOR:eDP1}
 width = 100%
 height = 27
@@ -29,13 +29,13 @@ font-4 = Weather Icons:size=12;1
 font-3 = Font Awesome 5 Free:style=Solid:pixelsize=12;1
 font-5 = Font Awesome 5 Brands:pixelsize=8;1
 
-modules-left = i3
-modules-center = date
-modules-right = network-detail memory keyboard alsa
+modules-left = i3 title
+#modules-center = date
+modules-right = network-detail memory keyboard alsa date
 
-tray-position = right
-tray-padding = 3
-tray-detached = false
+#tray-position = right
+#tray-padding = 3
+#tray-detached = false
 
 cursor-click = pointer
 cursor-scroll = ns-resize
