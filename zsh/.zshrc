@@ -126,6 +126,7 @@ export TERM=xterm-256color
 
 alias Syu='sudo pacman -Syu'
 alias sc='sudo systemctl'
+alias ra='ranger'
 
 # 键
 if [[ -n "$TMUX" ]]; then
@@ -142,7 +143,7 @@ export VISUAL="vim"
 export EDITOR="vim"
 
 #Go
-export GOPATH=$HOME/Code/Go
+export GOPATH=$HOME/.go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 export GO111MODULE=on

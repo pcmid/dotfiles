@@ -38,12 +38,17 @@ floating_modifier $mod
 
 # start a terminal
 # bindsym $mod+Return exec gnome-terminal
-bindsym $mod+t exec xfce4-terminal
+bindsym $mod+t exec --no-startup-id st
 
 # amixer
-bindsym $mod+F3 exec amixer set Master 5%+
-bindsym $mod+F2 exec amixer set Master 5%-
-bindsym $mod+F1 exec amixer set Master toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%-
+bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
+
+# brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
+
 
 # i3lock
 bindsym $mod+F12 exec --no-startup-id i3lock-fancy-rapid 5 3
@@ -75,7 +80,7 @@ bindsym $mod+F12 exec --no-startup-id i3lock-fancy-rapid 5 3
 #bindsym $mod+Control+p exec wpp
 
 # thunderbird
-bindsym $mod+Control+t exec thunderbird
+#bindsym $mod+Control+t exec thunderbird
 
 # kill focused window
 bindsym $mod+q kill
@@ -88,11 +93,12 @@ bindsym $mod+q kill
 #
 # run rofi
 bindsym $mod+d exec --no-startup-id rofi -show drun -config ~/.config/rofi/themes/default.rasi
-bindsym $mod+Tab exec --no-startup-id rofi  -show window -config ~/.config/rofi/themes/Switch.rasi
-bindsym $mod+n exec --no-startup-id ~/.config/rofi/scripts/nmcli-rofi
+#bindsym $mod+Tab exec --no-startup-id rofi  -show window -config ~/.config/rofi/themes/Switch.rasi
+#bindsym $mod+n exec --no-startup-id ~/.config/rofi/scripts/nmcli-rofi
+bindsym $mod+n exec --no-startup-id networkmanager_dmenu
 
 # arandr
-bindsym $mod+Shift+n exec arandr
+bindsym $mod+Shift+n exec --no-startup-id arandr
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -138,6 +144,7 @@ bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
+floating_maximum_size 1080x720
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -311,20 +318,26 @@ exec --no-startup-id fcitx
 exec --no-startup-id sh ~/.fehbg
 
 # autolock
-exec --no-startup-id xidlehook --not-when-fullscreen --timer normal 300 'i3lock-fancy-rapid 5 3' ''
+exec --no-startup-id xidlehook --not-when-fullscreen --timer 300 'i3lock-fancy-rapid 5 3' '' --timer 900 'systemctl suspend' ''
 #exec --no-startup-id xautolock -locker /usr/bin/i3lock-next -time 1
 
 # screen timeout
 exec --no-startup-id xset dpms 300 600 900
 
 # dunst
-exec --no-startup-id dunst
+#exec --no-startup-id dunst
 
-exec --no-startup-id copyq
+#kdeconect
+exec --no-startup-id /usr/lib/kdeconnectd
+
+exec_always --no-startup-id copyq
 #bindsym $mod+Control+a exec "flameshot gui"
 
 # compton
-exec_always --no-startup-id compton -f
+exec --no-startup-id compton -f
+
+# xrandr
+#exec_always --no-startup-id xrandr --output eDP1 --scale 1.5x1.5
 
 #######################################################################
 # automatically start i3-config-wizard to offer the user to create a

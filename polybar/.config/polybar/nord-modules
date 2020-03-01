@@ -63,7 +63,7 @@ format = <label-state> <label-mode>
 ;   %mode%
 ; Default: %mode%
 label-mode = %mode%
-label-mode-padding = 2
+label-mode-padding = 1
 label-mode-background = #e85d00
 ; Available tokens:
 ;   %name%
@@ -74,7 +74,7 @@ label-mode-background = #e85d00
 label-focused = %icon%
 label-focused-foreground = #ffffff
 label-focused-background = #4b5cc4
-label-focused-padding = 3
+label-focused-padding = 1
 ; Available tokens:
 ;   %name%
 ;   %icon%
@@ -82,7 +82,7 @@ label-focused-padding = 3
 ;   %output%
 ; Default: %icon%  %name%
 label-unfocused = %icon%
-label-unfocused-padding = 3
+label-unfocused-padding = 1
 label-unfocused-background = ${colors.nord0}
 ; Available tokens:
 ;   %name%
@@ -92,7 +92,7 @@ label-unfocused-background = ${colors.nord0}
 ; Default: %icon%  %name%
 label-visible = %icon%
 label-visible-underline = #555555
-label-visible-padding = 3
+label-visible-padding = 1
 ; Available tokens:
 ;   %name%
 ;   %icon%
@@ -102,7 +102,7 @@ label-visible-padding = 3
 label-urgent = %icon%
 label-urgent-foreground = #000000
 label-urgent-background = #bd2c40
-label-urgent-padding = 3
+label-urgent-padding = 1
 ; Separator in between workspaces
 
 
@@ -127,7 +127,7 @@ label-urgent-padding = 2
 type = internal/xwindow
 format-foreground = ${colors.nord7}
 #format-underline = ${colors.nord7}
-format-padding = 4
+format-padding = 1
 
 label-maxlen = 20
 label-empty = Desktop
@@ -137,11 +137,11 @@ type = internal/date
 interval = 1.0
 ; See "http://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
 ; NOTE: if you want to use syntax tags here you need to use %%{...}
-date =%Y-%m-%d %H:%M:%S
+date = "%Y-%m-%d %H:%M:%S"
 
 format = <label>
-label = " %date% "
-label-margin = 1
+label = " %date%"
+;label-margin = 0
 label-foreground = ${colors.nord8}
 #label-underline = ${colors.nord8}
 
@@ -172,7 +172,7 @@ ramp-capacity-foreground = ${colors.notify}
 
 label-full = 
 label-full-foreground = ${colors.success}
-label-full-underline = ${colors.success}
+#label-full-underline = ${colors.success}
 
 [module/keyboard]
 type = internal/xkeyboard
@@ -218,7 +218,7 @@ format-volume = <ramp-volume> <label-volume>
 
 label-muted =  muted
 label-muted-foreground = ${colors.urgent}
-label-muted-underline = ${colors.urgent}
+;label-muted-underline = ${colors.urgent}
 
 ramp-volume-0 = 
 ramp-volume-0-foreground = ${colors.success}
@@ -232,7 +232,7 @@ ramp-volume-3-foreground = ${colors.urgent}
 ramp-headphones-0 = 
 
 ramp-volume-foreground = ${colors.nord7}
-label-volume-foreground = ${colors.nord8}
+;label-volume-foreground = ${colors.nord8}
 
 [module/backlight]
 type = internal/xbacklight
@@ -305,10 +305,29 @@ click-left = xdotool key control+grave
 [module/network-short]
 type = internal/network
 interface = ${config.interface}
+format-connected = <ramp-signal> <label-connected>
 
 interval = 1
 
-format-connected = <ramp-signal>
+; All labels support the following tokens:
+;   %ifname%    [wireless+wired]
+;   %local_ip%  [wireless+wired]
+;   %local_ip6% [wireless+wired]
+;   %essid%     [wireless]
+;   %signal%    [wireless]
+;   %upspeed%   [wireless+wired]
+;   %downspeed% [wireless+wired]
+;   %linkspeed% [wired]
+
+; Default: %ifname% %local_ip%
+label-connected = %essid%
+ramp-label-connected-0-foreground = ${colors.urgent}
+ramp-label-connected-1-foreground = ${colors.notify}
+ramp-label-connected-2-foreground = ${colors.nord7}
+ramp-label-connected-3-foreground = ${colors.success}
+;label-connected-padding = 0
+
+;ramp-signal-padding = 1
 
 ramp-signal-0 = 
 ramp-signal-1 = 
@@ -316,16 +335,16 @@ ramp-signal-2 = 
 ramp-signal-3 = 
 
 ramp-signal-0-foreground = ${colors.urgent}
-ramp-signal-0-underline = ${colors.urgent}
+;ramp-signal-0-underline = ${colors.urgent}
 
 ramp-signal-1-foreground = ${colors.notify}
-ramp-signal-1-underline = ${colors.notify}
+;ramp-signal-1-underline = ${colors.notify}
 
 ramp-signal-2-foreground = ${colors.nord7}
-ramp-signal-2-underline = ${colors.nord7}
+;ramp-signal-2-underline = ${colors.nord7}
 
 ramp-signal-3-foreground = ${colors.success}
-ramp-signal-3-underline = ${colors.success}
+;ramp-signal-3-underline = ${colors.success}
 ; vim:ft=dosini
 [module/cpu]
 type = internal/cpu
@@ -356,6 +375,7 @@ interval = 3
 format = <ramp-used> <label>
 
 label = %gb_used%
+;label-foreground = ${colors.nord7}
 
 ramp-used-0 = 
 ramp-used-0-foreground = ${colors.success}
@@ -384,7 +404,7 @@ interval = 1
 
 format-connected = <label-connected>
 
-label-connected =  %downspeed:9%   %upspeed:9%
+label-connected =  %downspeed:7%  %upspeed:7%
 label-connected-foreground = ${colors.success}
 
 [module/temperature]

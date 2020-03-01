@@ -174,7 +174,6 @@ ramp-capacity-foreground = ${colors.notify}
 
 label-full = 
 label-full-foreground = ${colors.success}
-label-full-underline = ${colors.success}
 
 [module/keyboard]
 type = internal/xkeyboard
