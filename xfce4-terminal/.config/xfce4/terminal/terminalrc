@@ -26,11 +26,7 @@ MiscSlimTabs=FALSE
 MiscNewTabAdjacent=FALSE
 MiscSearchDialogOpacity=100
 MiscShowUnsafePasteDialog=FALSE
-<<<<<<< HEAD
-FontName=JetBrains Mono 12
-=======
 FontName=JetBrains Mono Medium 12
->>>>>>> 99987bd519bfd1f344885c08c58b917bb3d0fc9a
 BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
 ScrollingOnKeystroke=FALSE
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
