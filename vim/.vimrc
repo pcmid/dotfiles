@@ -45,6 +45,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "需要安装ctags
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 
+Plug 'skywind3000/vim-terminal-help'
+
 call plug#end()
 
 """"""""""""""""""""""""""通用配置""""""""""""""""""""""""""

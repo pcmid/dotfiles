@@ -306,7 +306,7 @@ bindsym $mod+r mode "resize"
 new_window pixel 0
 
 # polybar
-exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec --no-startup-id ~/.config/polybar/launch.sh
 
 # numlock
 exec --no-startup-id numlockx on
