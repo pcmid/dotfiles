@@ -94,8 +94,8 @@ bindsym $mod+q kill
 # run rofi
 bindsym $mod+d exec --no-startup-id rofi -show drun -config ~/.config/rofi/themes/default.rasi
 #bindsym $mod+Tab exec --no-startup-id rofi  -show window -config ~/.config/rofi/themes/Switch.rasi
-#bindsym $mod+n exec --no-startup-id ~/.config/rofi/scripts/nmcli-rofi
-bindsym $mod+n exec --no-startup-id networkmanager_dmenu
+bindsym $mod+n exec --no-startup-id ~/.config/rofi/scripts/nmcli-rofi
+#bindsym $mod+n exec --no-startup-id networkmanager_dmenu
 
 # arandr
 bindsym $mod+Shift+n exec --no-startup-id arandr
@@ -138,7 +138,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+#bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -219,8 +219,10 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # assign [class="slack"] $ws8
 # assign [class="virtualbox"] $ws9
 
-# for_window [instance="Steam"] floating enable
-# for_window [instance="Steam"] border none
+for_window [instance="^.*Minecraft.*"] floating enable
+for_window [instance="^.*Minecraft.*"] border none
+for_window [instance="^.*hmcl.*"] floating enable
+for_window [instance="^.*hmcl.*"] border none
 for_window [class="^.*"] border none
 
 # reload the configuration file
@@ -305,13 +307,17 @@ bindsym $mod+r mode "resize"
 # border
 new_window pixel 0
 
+# pulseaudio
+#exec --no-startup-id pulseaudio --start
+
 # polybar
-exec --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # numlock
 exec --no-startup-id numlockx on
 
 # fcitx
+exec --no-startup-id fcitx5
 exec --no-startup-id fcitx
 
 # background
@@ -330,11 +336,12 @@ exec --no-startup-id xset dpms 300 600 900
 #kdeconect
 exec --no-startup-id /usr/lib/kdeconnectd
 
-exec_always --no-startup-id copyq
-#bindsym $mod+Control+a exec "flameshot gui"
+exec --no-startup-id copyq
+bindsym $mod+Control+a exec --no-startup-id flameshot gui
 
 # compton
-exec --no-startup-id compton -f
+exec --no-startup-id picom -f
+
 
 # xrandr
 #exec_always --no-startup-id xrandr --output eDP1 --scale 1.5x1.5

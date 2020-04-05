@@ -64,7 +64,9 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # autosuggestions 
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh >/dev/null 2>&1
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh >/dev/null 2>&1
+source /usr/share/zsh/site-functions/zsh-syntax-highlighting.zsh >/dev/null 2>&1
 ZSH_AUTOSUGGEST_USE_ASYNC=1
 
 
@@ -128,11 +130,13 @@ alias Syu='sudo pacman -Syu'
 alias sc='sudo systemctl'
 alias ra='ranger'
 
+#alias yay='yay --editmenu -Syu'
+
 # 键
-if [[ -n "$TMUX" ]]; then
-  bindkey "^[[1~" beginning-of-line
-  bindkey "^[[4~" end-of-line
-fi
+#if [[ -n "$TMUX" ]]; then
+#  bindkey "^[[1~" beginning-of-line
+#  bindkey "^[[4~" end-of-line
+#fi
 # http proxy
 #export http_proxy=http://127.0.0.1:8118/
 
@@ -156,6 +160,7 @@ export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
 eval $(thefuck --alias)
 
 # gpg-agent
+gpg-connect-agent updatestartuptty /bye >/dev/null 2>&1
 export SSH_AUTH_SOCK=/run/user/1000/gnupg/S.gpg-agent.ssh
 
 # 不保留重复的历史

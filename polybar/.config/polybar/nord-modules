@@ -210,6 +210,8 @@ headphone-soundcard = default
 ;
 ; Default: Master
 master-mixer = Master
+headphone-mixer = Headphone
+headphone-id = 41
 
 ; Find by `pacmd list-sinks`, name field
 
@@ -233,6 +235,41 @@ ramp-headphones-0 = 
 
 ramp-volume-foreground = ${colors.nord7}
 ;label-volume-foreground = ${colors.nord8}
+;
+[module/pulseaudio]
+type = internal/pulseaudio
+
+; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
+; If not, uses default sink
+#sink = alsa_output.pci-0000_28_00.4.analog-stereo
+
+; Format 
+format-volume = <ramp-volume> <label-volume>
+
+label-muted =  muted
+label-muted-foreground = ${colors.urgent}
+;label-muted-underline = ${colors.urgent}
+
+ramp-volume-0 = 
+ramp-volume-0-foreground = ${colors.success}
+ramp-volume-1 = 
+ramp-volume-1-foreground = ${colors.notify}
+ramp-volume-2 = 
+ramp-volume-2-foreground = ${colors.warning}
+ramp-volume-3 = 
+ramp-volume-3-foreground = ${colors.urgent}
+
+ramp-headphones-0 = 
+
+ramp-volume-foreground = ${colors.nord7}
+;
+; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
+; Default: true
+use-ui-max = true
+
+; Interval for volume increase/decrease (in percent points)
+; Default: 5
+interval = 1
 
 [module/backlight]
 type = internal/xbacklight
