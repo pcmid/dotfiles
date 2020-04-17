@@ -108,7 +108,7 @@ export PATH=${PATH}:/usr/local/bin:/usr/local/opt/gettext/bin
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 # some more ls aliases
-alias ll='ls -Alh'
+alias ll='llmod'
 alias la='ls -A'
 alias l='ls -CF'
 
@@ -130,6 +130,8 @@ alias Syu='sudo pacman -Syu'
 alias sc='sudo systemctl'
 alias ra='ranger'
 
+alias wg='sudo wg'
+
 #alias yay='yay --editmenu -Syu'
 
 # 键
@@ -141,7 +143,7 @@ alias ra='ranger'
 #export http_proxy=http://127.0.0.1:8118/
 
 #环境变量
-export PATH=~/.local/share/bin:~/.local/bin:$PATH
+export PATH=~/.local/bin:$PATH
 unset QT_AUTO_SCREEN_SCALE_FACTOR QT_DEVICE_PIXEL_RATIO QT_IM_MODULE
 export VISUAL="vim"
 export EDITOR="vim"
