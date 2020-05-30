@@ -219,11 +219,27 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # assign [class="slack"] $ws8
 # assign [class="virtualbox"] $ws9
 
+# minecraft
 for_window [instance="^.*Minecraft.*"] floating enable
 for_window [instance="^.*Minecraft.*"] border none
 for_window [instance="^.*hmcl.*"] floating enable
 for_window [instance="^.*hmcl.*"] border none
+
+# steam
+for_window [class="^Steam$" title="^Friends$"] floating enable
+for_window [class="^Steam$" title="Steam - News"] kill
+for_window [class="^Steam$" title=".* - Chat"] floating enable
+for_window [class="^Steam$" title="^Settings$"] floating enable
+for_window [class="^Steam$" title=".* - event started"] floating enable
+for_window [class="^Steam$" title=".* CD key"] floating enable
+for_window [class="^Steam$" title="^Steam - Self Updater$"] floating enable
+for_window [class="^Steam$" title="^Screenshot Uploader$"] floating enable
+for_window [class="^Steam$" title="^Steam Guard - Computer Authorization Required$"] floating enable
+for_window [title="^Steam Keyboard$"] floating enable
+
+# all
 for_window [class="^.*"] border none
+
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

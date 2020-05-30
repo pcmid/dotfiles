@@ -6,5 +6,5 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
 export QT_DEVICE_PIXEL_RATIO=1
 
-gpg-connect-agent updatestartuptty /bye >/dev/null 2>&1
+#gpg-connect-agent updatestartuptty /bye >/dev/null 2>&1
 

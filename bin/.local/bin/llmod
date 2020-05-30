@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ls -Alh --color=always | awk '{
+ls -Alh --color=always $1 | awk '{
     k = 0
     s = 0
     for( i = 0; i <= 8; i++ )

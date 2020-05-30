@@ -162,7 +162,7 @@ export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
 eval $(thefuck --alias)
 
 # gpg-agent
-gpg-connect-agent updatestartuptty /bye >/dev/null 2>&1
+#gpg-connect-agent updatestartuptty /bye >/dev/null 2>&1
 export SSH_AUTH_SOCK=/run/user/1000/gnupg/S.gpg-agent.ssh
 
 # 不保留重复的历史

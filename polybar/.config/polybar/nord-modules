@@ -129,7 +129,7 @@ format-foreground = ${colors.nord7}
 #format-underline = ${colors.nord7}
 format-padding = 1
 
-label-maxlen = 20
+label-maxlen = 100
 label-empty = Desktop
 
 [module/date]
