@@ -3,17 +3,18 @@
 
 # Path to your oh-my-zsh installation.
 export TERM="xterm-256color"
-export ZSH=/home/id/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="lambda-mod"
+export LAMBDA_MOD_N_DIR_LEVELS=10
 #ZSH_THEME="powerlevel9k/powerlevel9k"
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(ssh user dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs)
-POWERLEVEL9K_SHOW_CHANGESET=true
-POWERLEVEL9K_CHANGESET_HASH_LENGTH=6
+#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(ssh user dir vcs)
+#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs)
+#POWERLEVEL9K_SHOW_CHANGESET=true
+#POWERLEVEL9K_CHANGESET_HASH_LENGTH=6
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -156,7 +157,7 @@ export GO111MODULE=on
 
 #Rust
 export PATH=$PATH:$HOME/.cargo/bin
-export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
+export RUSTUP_DIST_SERVER=https://mirrors.sjtug.sjtu.edu.cn/rust-static
 
 #thefuck
 eval $(thefuck --alias)
