@@ -129,7 +129,7 @@ format-foreground = ${colors.nord7}
 #format-underline = ${colors.nord7}
 format-padding = 1
 
-label-maxlen = 100
+label-maxlen = 64
 label-empty = Desktop
 
 [module/date]
@@ -339,9 +339,9 @@ content-padding = 1
 
 click-left = xdotool key control+grave
 
-[module/network-short]
+[module/wlan]
 type = internal/network
-interface = ${config.interface}
+interface = ${config.interface-wlan}
 format-connected = <ramp-signal> <label-connected>
 
 interval = 1
@@ -433,9 +433,20 @@ interval = 10
 
 label =  %notifications%
 
-[module/network-detail]
+[module/network-detail-wire]
 type = internal/network
-interface = ${config.interface}
+interface = ${config.interface-wire}
+
+interval = 1
+
+format-connected = <label-connected>
+
+label-connected =  %downspeed:7%  %upspeed:7%
+label-connected-foreground = ${colors.success}
+
+[module/network-detail-wlan]
+type = internal/network
+interface = ${config.interface-wlan}
 
 interval = 1
 

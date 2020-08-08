@@ -32,7 +32,7 @@ font-1 = Font Awesome 5 Free:style=Solid:pixelsize=14;1
 
 modules-left = i3 title
 #modules-center = date
-modules-right = network-detail memory keyboard pulseaudio date
+modules-right = wlan network-detail-wlan network-detail-wire memory keyboard battery pulseaudio date
 
 #tray-position = right
 #tray-padding = 3

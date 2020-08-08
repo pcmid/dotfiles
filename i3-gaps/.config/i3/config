@@ -53,6 +53,9 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 # i3lock
 bindsym $mod+F12 exec --no-startup-id i3lock-fancy-rapid 5 3
 
+# flameshot
+bindsym $mod+Control+a exec --no-startup-id flameshot gui
+
 # start the chrome
 # bindsym $mod+Shift+f exec chrome
 
@@ -353,7 +356,6 @@ exec --no-startup-id xset dpms 300 600 900
 exec --no-startup-id /usr/lib/kdeconnectd
 
 exec --no-startup-id copyq
-bindsym $mod+Control+a exec --no-startup-id flameshot gui
 
 # compton
 exec --no-startup-id picom -f
