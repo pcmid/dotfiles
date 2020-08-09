@@ -38,7 +38,7 @@ floating_modifier $mod
 
 # start a terminal
 # bindsym $mod+Return exec gnome-terminal
-bindsym $mod+t exec --no-startup-id st
+bindsym $mod+t exec --no-startup-id xfce4-terminal
 
 # amixer
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+
