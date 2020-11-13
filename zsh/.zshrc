@@ -109,7 +109,7 @@ export PATH=${PATH}:/usr/local/bin:/usr/local/opt/gettext/bin
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 # some more ls aliases
-alias ll='llmod'
+alias ll='ls -lhF'
 alias la='ls -A'
 alias l='ls -CF'
 
@@ -171,3 +171,5 @@ export SSH_AUTH_SOCK=/run/user/1000/gnupg/S.gpg-agent.ssh
 setopt HIST_IGNORE_ALL_DUPS
 export HISTSIZE=100000000
 export SAVEHIST=$HISTSIZE
+
+source /home/id/.config/broot/launcher/bash/br

@@ -1,96 +1,18 @@
-sw_volume: 92
+sw_volume: 96
 audio_device_state:1:fifo
 audio_device_state:1:My Pulse Output
-state: pause
-current: 25
-time: 3.688000
+state: stop
+current: 0
 random: 0
-repeat: 1
+repeat: 0
 single: 0
 consume: 0
 crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:白色相簿2/WHITE ALBUM2 Original Soundtrack ～encore～/01. Twnikle Snow.dsf
-1:白色相簿2/WHITE ALBUM2 Original Soundtrack ～answer～/1.01 - Answer.flac
-2:白色相簿2/WHITE ALBUM2 Original Soundtrack ～answer～/1.01 - Answer.flac
-3:白色相簿2/WHITE ALBUM2 Original Soundtrack ～answer～/1.02 - 恋のような Piano.flac
-4:白色相簿2/WHITE ALBUM2 Original Soundtrack ～answer～/1.03 - 恋のような.flac
-5:白色相簿2/WHITE ALBUM2 Original Soundtrack ～answer～/1.04 - cloture.flac
-6:白色相簿2/WHITE ALBUM2 Original Soundtrack ～closing～/1.01 - 幸せな記憶.flac
-7:白色相簿2/WHITE ALBUM2 Original Soundtrack ～closing～/1.02 - Extended Winter.flac
-8:白色相簿2/WHITE ALBUM2 Original Soundtrack ～closing～/1.03 - 吐露.flac
-9:白色相簿2/WHITE ALBUM2 Original Soundtrack ～closing～/1.04 - Snowfalls.flac
-10:白色相簿2/WHITE ALBUM2 Original Soundtrack ～closing～/1.05 - キャンドルライト.flac
-11:白色相簿2/WHITE ALBUM2 Original Soundtrack ～closing～/1.06 - Honesty.flac
-12:白色相簿2/WHITE ALBUM2 Original Soundtrack ～closing～/1.07 - Answer.flac
-13:白色相簿2/WHITE ALBUM2 Original Soundtrack ～closing～/1.08 - 最後に残るもの.flac
-14:白色相簿2/WHITE ALBUM2 Original Soundtrack ～closing～/1.09 - 溶け合う心.flac
-15:白色相簿2/WHITE ALBUM2 Original Soundtrack ～closing～/1.10 - 誰かが傷ついても.flac
-16:白色相簿2/WHITE ALBUM2 Original Soundtrack ～closing～/1.11 - Sunshine Day.flac
-17:白色相簿2/WHITE ALBUM2 Original Soundtrack ～closing～/1.12 - ためいき.flac
-18:白色相簿2/WHITE ALBUM2 Original Soundtrack ～closing～/1.13 - 届かない恋 song by Chiaki.flac
-19:白色相簿2/WHITE ALBUM2 Original Soundtrack ～closing～/1.14 - 見果てぬ夢.flac
-20:白色相簿2/WHITE ALBUM2 Original Soundtrack ～closing～/1.15 - ready.flac
-21:白色相簿2/WHITE ALBUM2 Original Soundtrack ～closing～/1.16 - コモレビ.flac
-22:白色相簿2/WHITE ALBUM2 Original Soundtrack ～closing～/1.17 - 約束の場所.flac
-23:白色相簿2/WHITE ALBUM2 Original Soundtrack ～closing～/1.18 - 聖歌.flac
-24:白色相簿2/WHITE ALBUM2 Original Soundtrack ～closing～/1.19 - 幸せな記憶 Piano.flac
-25:白色相簿2/WHITE ALBUM2 Original Soundtrack ～closing～/2.01 - 優しい嘘 instrumental.flac
-26:白色相簿2/WHITE ALBUM2 Original Soundtrack ～closing～/2.02 - 優しい嘘 Piano.flac
-27:白色相簿2/WHITE ALBUM2 Original Soundtrack ～closing～/2.03 - 優しい嘘.flac
-28:白色相簿2/WHITE ALBUM2 Original Soundtrack ～closing～/2.04 - 愛する心 instrumental.flac
-29:白色相簿2/WHITE ALBUM2 Original Soundtrack ～closing～/2.05 - 愛する心 Music Box.flac
-30:白色相簿2/WHITE ALBUM2 Original Soundtrack ～closing～/2.06 - 愛する心.flac
-31:白色相簿2/WHITE ALBUM2 Original Soundtrack ～closing～/2.07 - 心はいつもあなたのそばに instrumental.flac
-32:白色相簿2/WHITE ALBUM2 Original Soundtrack ～closing～/2.08 - 心はいつもあなたのそばに Piano.flac
-33:白色相簿2/WHITE ALBUM2 Original Soundtrack ～closing～/2.09 - 心はいつもあなたのそばに.flac
-34:白色相簿2/WHITE ALBUM2 Original Soundtrack ～closing～/2.10 - 時の魔法 instrumental.flac
-35:白色相簿2/WHITE ALBUM2 Original Soundtrack ～closing～/2.11 - 時の魔法 Music Box.flac
-36:白色相簿2/WHITE ALBUM2 Original Soundtrack ～closing～/2.12 - 時の魔法.flac
-37:白色相簿2/WHITE ALBUM2 Original Soundtrack ～closing～/2.13 - closing instrumental.flac
-38:白色相簿2/WHITE ALBUM2 Original Soundtrack ～closing～/2.14 - closing Acoustic Guitar.flac
-39:白色相簿2/WHITE ALBUM2 Original Soundtrack ～closing～/2.15 - closing.flac
-40:白色相簿2/WHITE ALBUM2 Original Soundtrack ～encore～/01. Twnikle Snow.dsf
-41:白色相簿2/WHITE ALBUM2 Original Soundtrack ～encore～/02. 恋のような.dsf
-42:白色相簿2/WHITE ALBUM2 Original Soundtrack ～encore～/03. 幸せな記憶.dsf
-43:白色相簿2/WHITE ALBUM2 Original Soundtrack ～encore～/04. WHITE ALBUM.dsf
-44:白色相簿2/WHITE ALBUM2 Original Soundtrack ～encore～/05. SOUND OF DESTINY.dsf
-45:白色相簿2/WHITE ALBUM2 Original Soundtrack ～encore～/06. 心はいつもあなたのそばに.dsf
-46:白色相簿2/WHITE ALBUM2 Original Soundtrack ～encore～/07. 優しい嘘.dsf
-47:白色相簿2/WHITE ALBUM2 Original Soundtrack ～encore～/08. Answer.dsf
-48:白色相簿2/WHITE ALBUM2 Original Soundtrack ～encore～/09. 愛する心.dsf
-49:白色相簿2/WHITE ALBUM2 Original Soundtrack ～encore～/10. さよならのこと.dsf
-50:白色相簿2/WHITE ALBUM2 Original Soundtrack ～encore～/11. 届かない恋.dsf
-51:白色相簿2/WHITE ALBUM2 Original Soundtrack ～encore～/12. 愛する心.dsf
-52:白色相簿2/WHITE ALBUM2 Original Soundtrack ～introductory～/1.01 - 届かない恋.flac
-53:白色相簿2/WHITE ALBUM2 Original Soundtrack ～introductory～/1.02 - 冬の街路樹.flac
-54:白色相簿2/WHITE ALBUM2 Original Soundtrack ～introductory～/1.03 - Dear Friends.flac
-55:白色相簿2/WHITE ALBUM2 Original Soundtrack ～introductory～/1.04 - イルミネーションタウン.flac
-56:白色相簿2/WHITE ALBUM2 Original Soundtrack ～introductory～/1.05 - いつか見た景色.flac
-57:白色相簿2/WHITE ALBUM2 Original Soundtrack ～introductory～/1.06 - SLAPSTICK STREET.flac
-58:白色相簿2/WHITE ALBUM2 Original Soundtrack ～introductory～/1.07 - boy meets girl and girl.flac
-59:白色相簿2/WHITE ALBUM2 Original Soundtrack ～introductory～/1.08 - 穏やかに過ぎゆく時.flac
-60:白色相簿2/WHITE ALBUM2 Original Soundtrack ～introductory～/1.09 - 言葉にできない想い.flac
-61:白色相簿2/WHITE ALBUM2 Original Soundtrack ～introductory～/1.10 - あの頃のように.flac
-62:白色相簿2/WHITE ALBUM2 Original Soundtrack ～introductory～/1.11 - 静かな冬の夜.flac
-63:白色相簿2/WHITE ALBUM2 Original Soundtrack ～introductory～/1.12 - 一途な心.flac
-64:白色相簿2/WHITE ALBUM2 Original Soundtrack ～introductory～/1.13 - 氷の刃.flac
-65:白色相簿2/WHITE ALBUM2 Original Soundtrack ～introductory～/1.14 - 本当の、嘘.flac
-66:白色相簿2/WHITE ALBUM2 Original Soundtrack ～introductory～/1.15 - WINTER VACATION.flac
-67:白色相簿2/WHITE ALBUM2 Original Soundtrack ～introductory～/2.01 - 聖夜.flac
-68:白色相簿2/WHITE ALBUM2 Original Soundtrack ～introductory～/2.02 - 綺麗で儚いもの.flac
-69:白色相簿2/WHITE ALBUM2 Original Soundtrack ～introductory～/2.03 - FILL YOU.flac
-70:白色相簿2/WHITE ALBUM2 Original Soundtrack ～introductory～/2.04 - うたわれるもの.flac
-71:白色相簿2/WHITE ALBUM2 Original Soundtrack ～introductory～/2.05 - 君をのせて.flac
-72:白色相簿2/WHITE ALBUM2 Original Soundtrack ～introductory～/2.06 - POWDER SNOW PIANO 2010.flac
-73:白色相簿2/WHITE ALBUM2 Original Soundtrack ～introductory～/2.07 - POWDER SNOW PIANO 2010～kazusa～.flac
-74:白色相簿2/WHITE ALBUM2 Original Soundtrack ～introductory～/2.08 - POWDER SNOW Guitar solo.flac
-75:白色相簿2/WHITE ALBUM2 Original Soundtrack ～introductory～/2.09 - After All～綴る想い～instrumental.flac
-76:白色相簿2/WHITE ALBUM2 Original Soundtrack ～introductory～/2.10 - After All～綴る想い～.flac
-77:白色相簿2/WHITE ALBUM2 Original Soundtrack ～introductory～/2.11 - 届かない恋(Piano version).flac
-78:白色相簿2/WHITE ALBUM2 Original Soundtrack ～introductory～/2.12 - Twinkle Snow instrumental.flac
-79:白色相簿2/WHITE ALBUM2 Original Soundtrack ～introductory～/2.13 - Twinkle Snow Piano quarter.flac
-80:白色相簿2/WHITE ALBUM2 Original Soundtrack ～introductory～/2.14 - Twinkle Snow.flac
+0:末日时在做什么？有没有空？可以来拯救吗？/終末なにしてますか？忙しいですか？救ってもらっていいですか？ オリジナルサウンドトラック「青い記憶」/1.04 - Scarborough Fair.flac
+1:末日时在做什么？有没有空？可以来拯救吗？/終末なにしてますか？忙しいですか？救ってもらっていいですか？ オリジナルサウンドトラック「青い記憶」/1.09 - 切ない恋心.flac
+2:末日时在做什么？有没有空？可以来拯救吗？/終末なにしてますか？忙しいですか？救ってもらっていいですか？ オリジナルサウンドトラック「青い記憶」/1.07 - Ever be my love.flac
+3:末日时在做什么？有没有空？可以来拯救吗？/終末なにしてますか？忙しいですか？救ってもらっていいですか？ オリジナルサウンドトラック「青い記憶」/1.03 - Always in my heart.flac
 playlist_end

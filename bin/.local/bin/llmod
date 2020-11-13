@@ -17,6 +17,6 @@ ls -Alh --color=always $1 | awk '{
     {
         printf( "%0o%0o ", s, k )
     }
-#    $1=""
+    $1=""
     print
 }'

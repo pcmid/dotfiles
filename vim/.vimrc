@@ -27,8 +27,8 @@ Plug 'Yggdroot/indentLine'                      "代码缩进线
 Plug 'w0rp/ale'                                 "语法检查和语义错误
 "Plug 'itchyny/vim-cursorword'                  "单词增加下划线
 Plug 'joshdick/onedark.vim'                     "vs风格 onedark
-Plug 'morhetz/gruvbox'                          "solarized更改主题 gruvbox
-Plug 'altercation/vim-colors-solarized'         "solarized
+"Plug 'morhetz/gruvbox'                          "solarized更改主题 gruvbox
+"Plug 'altercation/vim-colors-solarized'         "solarized
 Plug 'vimwiki/vimwiki'                          "vimwiki
 Plug 'scrooloose/nerdcommenter'                 "快捷键批量注释
 ""Markdown 预览
@@ -45,7 +45,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "需要安装ctags
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 
-Plug 'skywind3000/vim-terminal-help'
+"Plug 'skywind3000/vim-terminal-help'
 
 call plug#end()
 
