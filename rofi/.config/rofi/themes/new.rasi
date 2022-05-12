@@ -1,78 +1,37 @@
-/* vim:ft=css
+/**
  * rofi -dump-theme output.
- * Rofi version: 1.7.0
- */
+ * Rofi version: 1.7.1
+ **/
 * {
     red:                         rgba ( 220, 50, 47, 100 % );
-    blue:                        rgba ( 38, 139, 210, 100 % );
+    selected-active-foreground:  var(background);
     lightfg:                     rgba ( 88, 104, 117, 100 % );
-    lightbg:                     rgba ( 238, 232, 213, 100 % );
-
-    background:                  rgba ( 63, 63, 63, 0 % );
-    normal-background:           var(background);
-    active-background:           var(background);
-    alternate-normal-background: var(background);
-    alternate-active-background: var(background);
-    selected-normal-background:  rgba ( 127, 127, 127, 80 % );
-    selected-active-background:  var(background);
-
-    foreground:                  rgba ( 233, 233, 233, 100 % );
-    normal-foreground:           var(foreground);
-    active-foreground:           var(foreground);
-    alternate-normal-foreground: var(foreground);
-    alternate-active-foreground: var(foreground);
-    selected-normal-foreground:  var(foreground);
-    selected-active-foreground:  var(foreground);
-
-    selected-urgent-foreground:  var(foreground);
-    alternate-urgent-foreground: var(background);
-
-    urgent-foreground:           var(red);
-    urgent-background:           var(red);
-    selected-urgent-background:  var(red);
-    alternate-urgent-background: var(red);
     separatorcolor:              var(foreground);
+    urgent-foreground:           var(red);
+    alternate-urgent-background: var(lightbg);
+    lightbg:                     rgba ( 238, 232, 213, 100 % );
+    background-color:            transparent;
     border-color:                var(foreground);
+    normal-background:           var(background);
+    selected-urgent-background:  var(red);
+    alternate-active-background: var(lightbg);
     spacing:                     2;
+    blue:                        rgba ( 38, 139, 210, 100 % );
+    alternate-normal-foreground: var(foreground);
+    urgent-background:           var(background);
+    selected-normal-foreground:  var(lightbg);
+    active-foreground:           var(blue);
+    background:                  rgba ( 253, 246, 227, 100 % );
+    selected-active-background:  var(blue);
+    active-background:           var(background);
+    selected-normal-background:  var(lightfg);
+    alternate-normal-background: var(lightbg);
+    foreground:                  rgba ( 0, 43, 54, 100 % );
+    selected-urgent-foreground:  var(background);
+    normal-foreground:           var(foreground);
+    alternate-urgent-foreground: var(red);
+    alternate-active-foreground: var(blue);
 }
-
-* {
-    columns: 1;
-    background-color: @background;
-    border-color: @background;
-    text-color: @foreground;
-    font: "JetBrains Mono 15";
-}
-window {
-    background-color: rgba( 0, 0, 0, 70%);
-    border: 0;
-    border-radius: 4px;
-    padding: 40;
-    width: 30%;
-    height: 50%;
-}
-mainbox {
-    children: [inputbar, listview];
-    background-color: var(background);
-    spacing: 10px;
-    padding: 20px 20px;
-    border:  1px;
-}
-inputbar {
-    padding:    1px ;
-    spacing:    0px ;
-    text-color: var(foreground);
-    children:   [ prompt,textbox-prompt-colon,entry,num-filtered-rows,textbox-num-sep,num-rows,case-indicator ];
-}
-listview {
-    padding:      2px 0px 0px ;
-    scrollbar:    false;
-    border-color: var(background);
-    spacing:      2px ;
-    fixed-height: 0;
-    border:       0px dash 0px 0px ;
-}
-
 element {
     padding: 1px ;
     cursor:  pointer;
@@ -116,16 +75,25 @@ element alternate.active {
     text-color:       var(alternate-active-foreground);
 }
 element-text {
-    background-color: var(background);
+    background-color: transparent;
     cursor:           inherit;
     highlight:        inherit;
     text-color:       inherit;
 }
 element-icon {
-    background-color: rgba ( 0, 0, 0, 0 % );
+    background-color: transparent;
     size:             1.0000em ;
     cursor:           inherit;
     text-color:       inherit;
+}
+window {
+    padding:          5;
+    background-color: var(background);
+    border:           1;
+}
+mainbox {
+    padding: 0;
+    border:  0;
 }
 message {
     padding:      1px ;
@@ -134,6 +102,14 @@ message {
 }
 textbox {
     text-color: var(foreground);
+}
+listview {
+    padding:      2px 0px 0px ;
+    scrollbar:    true;
+    border-color: var(separatorcolor);
+    spacing:      2px ;
+    fixed-height: 0;
+    border:       2px dash 0px 0px ;
 }
 scrollbar {
     width:        4px ;
@@ -157,16 +133,22 @@ button selected {
 }
 num-filtered-rows {
     expand:     false;
-    text-color: rgba ( 128, 128, 128, 100 % );
+    text-color: Gray;
 }
 num-rows {
     expand:     false;
-    text-color: rgba ( 128, 128, 128, 100 % );
+    text-color: Gray;
 }
 textbox-num-sep {
     expand:     false;
     str:        "/";
-    text-color: rgba ( 128, 128, 128, 100 % );
+    text-color: Gray;
+}
+inputbar {
+    padding:    1px ;
+    spacing:    0px ;
+    text-color: var(normal-foreground);
+    children:   [ prompt,textbox-prompt-colon,entry,num-filtered-rows,textbox-num-sep,num-rows,case-indicator ];
 }
 case-indicator {
     spacing:    0;
@@ -176,7 +158,7 @@ entry {
     text-color:        var(normal-foreground);
     cursor:            text;
     spacing:           0;
-    placeholder-color: rgba ( 128, 128, 128, 100 % );
+    placeholder-color: Gray;
     placeholder:       "Type to filter";
 }
 prompt {

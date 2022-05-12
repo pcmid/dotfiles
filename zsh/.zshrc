@@ -109,9 +109,9 @@ export PATH=${PATH}:/usr/local/bin:/usr/local/opt/gettext/bin
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 # some more ls aliases
-alias ll='ls -lhF'
-alias la='ls -A'
-alias l='ls -CF'
+alias ll='lsd -lhF'
+alias la='lsd -A'
+alias l='lsd -CF'
 
 alias goodnight='shutdown -h now'
 
@@ -130,9 +130,11 @@ export TERM=xterm-256color
 alias Syu='sudo pacman -Syu'
 alias sc='sudo systemctl'
 alias ra='ranger'
+alias k='kubectl'
 
 alias wg='sudo wg'
 
+alias kratos='GOSUMDB=off GOPROXY=http://goproxy.bilibili.co ~/.go/bin/kratos'
 #alias yay='yay --editmenu -Syu'
 
 # 键
@@ -164,7 +166,7 @@ eval $(thefuck --alias)
 
 # gpg-agent
 #gpg-connect-agent updatestartuptty /bye >/dev/null 2>&1
-export SSH_AUTH_SOCK=/run/user/1000/gnupg/S.gpg-agent.ssh
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 
 # 不保留重复的历史
 
@@ -172,4 +174,7 @@ setopt HIST_IGNORE_ALL_DUPS
 export HISTSIZE=100000000
 export SAVEHIST=$HISTSIZE
 
-source /home/id/.config/broot/launcher/bash/br
+#source /home/id/.config/broot/launcher/bash/br
+
+# kubectl
+source <(kubectl completion zsh)

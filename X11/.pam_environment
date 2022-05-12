@@ -1,0 +1,7 @@
+LANG=zh_CN.UTF-8
+XIM_PROGRAM=fcitx
+XIM=fcitx
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS="@im=fcitx"
+QT_DEVICE_PIXEL_RATIO=1

@@ -24,8 +24,8 @@
     frame_color = "#232323"
     separator_color = frame
     sort = yes
-    idle_threshold = 120
-    font = Source Han Sans SC 12
+    idle_threshold = 10
+    font = JetBrains Mono Medium 12
     line_height = 0
     markup = full
     format = "<span><b>%s %p</b></span>\n%b"

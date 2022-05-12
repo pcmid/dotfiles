@@ -2,7 +2,8 @@
 
 [config]
 # network interface, check by `ip link show`
-interface-wire = eno1
+#interface-wire = eno1
+interface-wire = eno0
 interface-wlan = wlan0
 
 # when the current battery capacity excess this value,

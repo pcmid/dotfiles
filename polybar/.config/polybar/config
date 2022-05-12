@@ -8,8 +8,9 @@ include-file = $HOME/.config/polybar/nord-config
 [bar/nord-modules]
 monitor = ${env:MONITOR:}
 width = 100%
-height = 28
+height = 42
 fixed-center = true
+dpi = 144
 
 background = ${colors.nord0}
 foreground = ${colors.nord4}
@@ -24,7 +25,7 @@ module-margin = 0
 module-margin-right = 1
 
 font-0 = JetBrains Mono,JetBrains Mono Medium:style=Medium,Regular:pixelsize=14
-font-1 = Font Awesome 5 Free:style=Solid:pixelsize=14;1
+font-1 = Font Awesome 6 Free:style=Solid:pixelsize=14;1
 ;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 ;font-2 = siji:pixelsize=10;1
 ;font-4 = Weather Icons:size=14;1

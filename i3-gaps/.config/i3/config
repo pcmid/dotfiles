@@ -38,7 +38,7 @@ floating_modifier $mod
 
 # start a terminal
 # bindsym $mod+Return exec gnome-terminal
-bindsym $mod+t exec --no-startup-id xfce4-terminal
+bindsym $mod+t exec --no-startup-id alacritty
 
 # amixer
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+
@@ -51,7 +51,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 
 
 # i3lock
-bindsym $mod+F12 exec --no-startup-id i3lock-fancy-rapid 10 5
+#bindsym $mod+F12 exec --no-startup-id i3lock-fancy-rapid 10 5
 
 # flameshot
 bindsym $mod+Control+a exec --no-startup-id flameshot gui
@@ -95,9 +95,9 @@ bindsym $mod+q kill
 # bindsym $mod+d exec dmenu_run
 #
 # run rofi
-bindsym $mod+d exec --no-startup-id rofi -show drun -config ~/.config/rofi/themes/default.rasi
+bindsym $mod+d exec --no-startup-id rofi -show drun -config ~/.config/rofi/config.rasi
 #bindsym $mod+Tab exec --no-startup-id rofi  -show window -config ~/.config/rofi/themes/Switch.rasi
-bindsym $mod+n exec --no-startup-id ~/.config/rofi/scripts/nmcli-rofi
+#bindsym $mod+n exec --no-startup-id ~/.config/rofi/scripts/nmcli-rofi
 #bindsym $mod+n exec --no-startup-id networkmanager_dmenu
 
 # arandr
@@ -147,7 +147,7 @@ bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
-floating_maximum_size 1080x720
+floating_maximum_size 1080x2160
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -221,17 +221,14 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # assign [class="thunderbird"] $ws7
 # assign [class="slack"] $ws8
 # assign [class="virtualbox"] $ws9
-assign [class="Qemu-system-x86_64"] $ws10
-
+#assign [class="Qemu-system-x86_64"] $ws10
+#
 # jetbrains
 for_window [class="^jetbrains-.+"][window_type=dialog] focus
 
 # minecraft
 for_window [instance="^.*Minecraft.*"] floating enable
 for_window [instance="^.*Minecraft.*"] border none
-assign [instance="^.*Minecraft.*"] $ws9
-for_window [instance="^.*hmcl.*"] floating enable
-for_window [instance="^.*hmcl.*"] border none
 
 # steam
 for_window [class="^Steam$" title="^Friends$"] floating enable
@@ -260,8 +257,8 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-gaps inner 10
-gaps outer -5
+gaps inner 4
+#gaps outer -5
 #gaps left 5
 #gaps right 5
 #gpas top 5
@@ -342,11 +339,33 @@ new_window pixel 0
 # pulseaudio
 #exec --no-startup-id pulseaudio --start
 
+# gnome
+#exec --no-startup-id /usr/lib/gsd-xsettings
+#exec_always --no-startup-id gnome-power-manager
+#exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+#exec --no-startup-id gnome-flashback
+# plasma
+for_window [title="Desktop — Plasma"] kill; floating enable; border none
+for_window [class="plasmashell"] fullscreen;
+assign [class="plasmashell"] $ws10
+for_window [class="Plasma"] floating enable; border none
+for_window [title="plasma-desktop"] floating enable; border none
+for_window [title="win7"] floating enable; border none
+for_window [class="krunner"] floating enable; border none
+for_window [class="Kmix"] floating enable; border none
+for_window [class="Klipper"] floating enable; border none
+for_window [class="Plasmoidviewer"] floating enable; border none
+for_window [class="(?i)*nextcloud*"] floating disable
+#for_window [class="plasma-browser-integration-host"] kill
+#for_window [class="plasmashell" window_type="notification"] floating enable, border none, move right 700px, move down 450px
+for_window [class="plasmashell" window_type="notification"] floating enable, border none
+no_focus [class="plasmashell" window_type="notification"]
+
 # polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # numlock
-exec --no-startup-id numlockx on
+#exec --no-startup-id numlockx on
 
 # fcitx
 exec --no-startup-id fcitx5
@@ -356,7 +375,7 @@ exec --no-startup-id fcitx5
 exec --no-startup-id sh ~/.fehbg
 
 # autolock
-exec --no-startup-id xidlehook --not-when-fullscreen --timer 300 'i3lock-fancy-rapid 10 5' '' #--timer 900 'systemctl suspend' ''
+#exec --no-startup-id xidlehook --not-when-fullscreen --timer 300 'i3lock-fancy-rapid 10 5' '' #--timer 900 'systemctl suspend' ''
 #exec --no-startup-id xautolock -locker /usr/bin/i3lock-next -time 1
 
 # screen timeout
